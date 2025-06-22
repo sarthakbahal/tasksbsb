@@ -1,0 +1,38 @@
+{
+  "canisters": {
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    },
+    "task3_backend": {
+      "candid": "src/task3_backend/task3_backend.did",
+      "package": "task3_backend",
+      "type": "rust"
+    },
+    "task3_frontend": {
+      "dependencies": [
+        "task3_backend"
+      ],
+      "source": [
+        "src/task3_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "task3_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
